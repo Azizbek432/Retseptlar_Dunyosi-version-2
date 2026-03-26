@@ -1,61 +1,63 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { LogOut, Search, User } from "lucide-react";
+import { Link, NavLink } from "react-router-dom";
+import { LogOut, Search } from "lucide-react";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
+  // Active klassini aniqlash uchun funksiya
+  const activeClass = ({ isActive }) => 
+    isActive ? `${styles.navLink} ${styles.active}` : styles.navLink;
+
   return (
     <nav className={styles.nav}>
       <div className={styles.container}>
-        <h1 className={styles.logo}>
+        {/* Logo qismi */}
+        <div className={styles.logo}>
           <Link to="/">
-            <span>🥘</span> Retseplar Dunyosi
+            <div className={styles.logoIcon}>🍽️</div>
+            <div className={styles.logoText}>
+              <p>RETSEPLAR</p>
+              <span>DUNYOSI</span>
+            </div>
           </Link>
-        </h1>
+        </div>
 
+        {/* Menyu qismi */}
         <ul className={styles.menu}>
           <li className={styles.navItem}>
-            <Link to="/">Bosh sahifa</Link>
+            <NavLink to="/" className={activeClass}>Bosh sahifa</NavLink>
           </li>
           <li className={styles.navItem}>
-            <Link to="/all-recipes">Retseptlar</Link>
+            <NavLink to="/categories" className={activeClass}>Kategoriyalar</NavLink>
           </li>
           <li className={styles.navItem}>
-            <Link to="/favorites">Sevimli</Link>
+            <NavLink to="/new" className={activeClass}>Yangilar</NavLink>
+          </li>
+          <li className={styles.navItem}>
+            <NavLink to="/blog" className={activeClass}>Blog</NavLink>
+          </li>
+          <li className={styles.navItem}>
+            <NavLink to="/contact" className={activeClass}>Aloqa</NavLink>
           </li>
         </ul>
 
+        {/* Tugmalar va Profil */}
         <div className={styles.btnContainer}>
-          <div className={styles.searchBtn}>
+          <button className={styles.searchBtn} aria-label="Qidirish">
             <Search size={20} />
-          </div>
+          </button>
 
-          <div className={styles.profileBtn}>
-            <Link
-              to="/profile"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                textDecoration: "none",
-              }}
-            >
-              <div
-                style={{
-                  background: "#f3a61d",
-                  padding: "4px 8px",
-                  borderRadius: "50%",
-                  color: "white",
-                }}
-              >
-                A
-              </div>
-              <span>Azizbek</span>
-            </Link>
-          </div>
+          <Link to="/profile" className={styles.profileBtn}>
+            <div className={styles.avatar}>
+              <img src="https://i.pravatar.cc/150?u=azizbek" alt="User" />
+            </div>
+            <span className={styles.welcomeText}>
+              Xush kelibsiz, <b>Azizbek!</b>
+            </span>
+          </Link>
 
-          <button className={styles.kirishBtn} title="Chiqish">
-            <LogOut size={20} />
+          <button className={styles.logoutBtn} title="Chiqish">
+            <LogOut size={18} />
           </button>
         </div>
       </div>
