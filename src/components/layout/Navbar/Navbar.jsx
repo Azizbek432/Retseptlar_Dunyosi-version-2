@@ -3,8 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { LogOut, Search } from "lucide-react";
 import styles from "./Navbar.module.css";
 
-const Navbar = () => {
-  // Active klassini aniqlash uchun funksiya
+const Navbar = ({ onSearchClick }) => { 
   const activeClass = ({ isActive }) => 
     isActive ? `${styles.navLink} ${styles.active}` : styles.navLink;
 
@@ -22,28 +21,24 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Menyu qismi */}
         <ul className={styles.menu}>
           <li className={styles.navItem}>
             <NavLink to="/" className={activeClass}>Bosh sahifa</NavLink>
           </li>
           <li className={styles.navItem}>
-            <NavLink to="/categories" className={activeClass}>Kategoriyalar</NavLink>
+            <NavLink to="/all-recipes" className={activeClass}>Retseptlar</NavLink>
           </li>
           <li className={styles.navItem}>
-            <NavLink to="/new" className={activeClass}>Yangilar</NavLink>
-          </li>
-          <li className={styles.navItem}>
-            <NavLink to="/blog" className={activeClass}>Blog</NavLink>
-          </li>
-          <li className={styles.navItem}>
-            <NavLink to="/contact" className={activeClass}>Aloqa</NavLink>
+            <NavLink to="/favorites" className={activeClass}>Sevimli</NavLink>
           </li>
         </ul>
 
-        {/* Tugmalar va Profil */}
         <div className={styles.btnContainer}>
-          <button className={styles.searchBtn} aria-label="Qidirish">
+          <button 
+            className={styles.searchBtn} 
+            aria-label="Qidirish"
+            onClick={onSearchClick} 
+          >
             <Search size={20} />
           </button>
 
