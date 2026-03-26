@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "../pages/Home";
-import AllRecipes from "../pages/AllRecipes";
+import Home from "../pages/Home/Home.jsx";
+import AllRecipes from "../pages/AllRecipes/AllRecipes.jsx";
 
 const AppRouter = () => {
   return (
