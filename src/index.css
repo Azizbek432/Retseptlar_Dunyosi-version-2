@@ -1,4 +1,5 @@
-:root {
+
+/* :root {
   --text: #6b6375;
   --text-h: #08060d;
   --bg: #fff;
@@ -92,7 +93,9 @@ a {
   transition: 0.2s ease;
 }
 
-main {
-  flex: 1;
-  padding: 40px;
-}
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+} */
