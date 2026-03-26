@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Toshkent Palovi",
+    "category": "Milliy Taomlar",
+    "time": 120,
+    "image": "palov.jpg",
+    "desc": "Sarimsoq va noxat qo'shilgan haqiqiy to'y oshi..."
+  },
+  {
+    "id": 2,
+    "title": "Manti",
+    "category": "Milliy Taomlar",
+    "time": 90,
+    "image": "manti.jpg",
+    "desc": "Yubqa xamir va mayda to'g'ralgan go'shtdan tayyorlangan..."
+  }
+]
