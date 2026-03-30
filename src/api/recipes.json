@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Toshkent Palovi",
+    "title": "Osh",
     "category": "Milliy Taomlar",
     "time": 120,
     "image": "palov.jpg",
@@ -13,6 +13,102 @@
     "category": "Milliy Taomlar",
     "time": 90,
     "image": "manti.jpg",
-    "desc": "Yubqa xamir va mayda to'g'ralgan go'shtdan tayyorlangan..."
+    "desc": "Yupqa xamir va mayda to'g'ralgan go'shtdan tayyorlangan..."
+  },
+  {
+    "id": 3,
+    "title": "Shashlik",
+    "category": "Milliy Taomlar",
+    "time": 60,
+    "image": "shashlik.jpg",
+    "desc": "Marinadlangan go'sht va sabzavotlardan tayyorlangan shashlik..."
+  },
+  {
+    "id": 4,
+    "title": "Lag'mon",
+    "category": "Milliy Taomlar",
+    "time": 80,
+    "image": "lagmon.jpg",
+    "desc": "Qo'lda tayyorlangan lag'mon noodle va sabzavotlardan tayyorlangan..."
+  },
+  {
+    "id": 5,
+    "title": "Sho'rva",
+    "category": "Milliy Taomlar",
+    "time": 75,
+    "image": "sho'rva.jpg",
+    "desc": "Sho'rva - bu sabzavotlar, go'sht va ziravorlardan tayyorlanadigan mazali va issiq suyuq taom."
+  },
+  {
+    "id": 6,
+    "title": "Chuchvara",
+    "category": "Milliy Taomlar",
+    "time": 70,
+    "image": "chuchvara.jpg",
+    "desc": "Chuchvara - bu mayda to'g'ralgan go'sht va sabzavotlardan tayyorlanadigan kichik dumaloq taom."
+  },
+  {
+    "id": 7,
+    "title": "Shakarob",
+    "category": "Milliy Taomlar",
+    "time": 90,
+    "image": "shakarob.jpg",
+    "desc": "Shakarob - Bu sabzavotlardan tayyorlangan ovqatga solib yeyiladigan salat."
+  },
+  {
+    "id": 8,
+    "title": "Mastava",
+    "category": "Milliy Taomlar",
+    "time": 90,
+    "image": "mastava.jpg",
+    "desc": "Mastava - bu sabzavotlar, go'sht va guruchdan tayyorlanadigan mazali va issiq taom."
+  },
+  {
+    "id": 9,
+    "title": "Pizza",
+    "category": "Xorijiy Taomlar",
+    "time": 30,
+    "image": "pizza.jpg",
+    "desc": "Pizza - bu pomidor sousi, pishloq va turli xil ingredientlardan tayyorlanadigan mazali taom."
+  },
+  {
+    "id": 10,
+    "title": "Burger",
+    "category": "Xorijiy Taomlar",
+    "time": 25,
+    "image": "burger.jpg",
+    "desc": "Burger - bu go'sht, pishloq va turli xil ingredientlardan tayyorlanadigan xorijiy taom."
+  },
+  {
+    "id": 11,
+    "title": "Norin",
+    "category": "Milliy Taomlar",
+    "time": 40,
+    "image": "norin.jpg",
+    "desc": "Norin - bu qo'y go'shti, sabzavotlar va maxsus ziravorlardan tayyorlanadigan an'anaviy o'zbek taomi."
+  },
+  {
+    "id": 12,
+    "title": "Samsa",
+    "category": "Milliy Taomlar",
+    "time": 60,
+    "image": "somsa.jpg",
+    "desc": "Samsa - bu xamir ichida go'sht va sabzavotlar bilan tayyorlanadigan mazali taom."
+  },
+  {
+    "id": 13,
+    "title": "Barak",
+    "category": "Milliy Taomlar",
+    "time": 50,
+    "image": "barak.jpg",
+    "desc": "Barak - bu xamir ichida go'sht bilan tayyorlanadigan xorazmcha mazali taom."
+  },
+  {
+    "id": 14,
+    "title": "Tort",
+    "category": "Xorijiy Taomlar",
+    "time": 45,
+    "image": "tort.jpg",
+    "desc": "Tort - bu shirinliklar, krem va boshqa ingredientlardan tayyorlanadigan mazali desert."
   }
 ]
