@@ -1,0 +1,27 @@
+.category-container{
+    background-color: #1A1612; 
+    padding: 40px 0;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-title{
+    color: white;
+}
+
+.ciricle-category{
+    width: 45px;
+    height: 3px;
+    border-radius: 20px;
+    background-color: orange;
+    margin: 20px 0;
+}
+
+.btnCategory{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
