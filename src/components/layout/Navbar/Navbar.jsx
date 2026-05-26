@@ -1,57 +1,117 @@
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
-import { LogOut, Search } from "lucide-react";
-import styles from "./Navbar.module.css";
+import React, { useState } from 'react';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { LogOut, Search, ChevronDown } from 'lucide-react';
+import './Navbar.css'; // ✅ Module o'rniga oddiy CSS
 
 const Navbar = ({ onSearchClick }) => { 
-  const activeClass = ({ isActive }) => 
-    isActive ? `${styles.navLink} ${styles.active}` : styles.navLink;
+  const navigate = useNavigate();
+  const [recipesMenuOpen, setRecipesMenuOpen] = useState(false);
+
+  const categories = [
+    { name: "Milliy taomlar", icon: "🍲" },
+    { name: "Shirinliklar", icon: "🍰" },
+    { name: "Tezkor taomlar", icon: "🍕" },
+    { name: "Parhez taomlar", icon: "🥗" },
+    { name: "Bayramona", icon: "🎂" },
+    { name: "Salatlar", icon: "🥬" },
+  ];
+
+  const handleSearchClick = () => {
+    if (onSearchClick) {
+      onSearchClick();
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        const searchInput = document.querySelector('.search-box input');
+        if (searchInput) {
+          searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          searchInput.focus();
+        }
+      }, 100);
+    }
+  };
 
   return (
-    <nav className={styles.nav}>
-      <div className={styles.container}>
-        {/* Logo qismi */}
-        <div className={styles.logo}>
+    <nav className="navbar">
+      <div className="navbar-container">
+        {/* Logo */}
+        <div className="navbar-logo">
           <Link to="/">
-            <div className={styles.logoIcon}>🍽️</div>
-            <div className={styles.logoText}>
-              <p>RETSEPLAR</p>
-              <span>DUNYOSI</span>
+            <span className="logo-icon">🍽️</span>
+            <div className="logo-text">
+              <p className="logo-subtitle">RETSEPLAR</p>
+              <span className="logo-title">DUNYOSI</span>
             </div>
           </Link>
         </div>
 
-        <ul className={styles.menu}>
-          <li className={styles.navItem}>
-            <NavLink to="/" className={activeClass}>Bosh sahifa</NavLink>
+        {/* Menu */}
+        <ul className="navbar-menu">
+          <li className="menu-item">
+            <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>
+              Bosh sahifa
+            </NavLink>
           </li>
-          <li className={styles.navItem}>
-            <NavLink to="/all-recipes" className={activeClass}>Retseptlar</NavLink>
+          
+          {/* Dropdown */}
+          <li 
+            className="menu-item dropdown"
+            onMouseEnter={() => setRecipesMenuOpen(true)}
+            onMouseLeave={() => setRecipesMenuOpen(false)}
+          >
+            <NavLink to="/recipes" className={({ isActive }) => isActive ? 'active' : ''}>
+              Retseptlar
+              <ChevronDown size={16} className={`dropdown-icon ${recipesMenuOpen ? 'rotate' : ''}`} />
+            </NavLink>
+            
+            <ul className={`dropdown-menu ${recipesMenuOpen ? 'show' : ''}`}>
+              {categories.map((cat, index) => (
+                <li key={index}>
+                  <Link 
+                    to={`/recipes?category=${encodeURIComponent(cat.name)}`}
+                    className="dropdown-item"
+                    onClick={() => setRecipesMenuOpen(false)}
+                  >
+                    <span>{cat.icon}</span> {cat.name}
+                  </Link>
+                </li>
+              ))}
+              <li className="dropdown-divider"></li>
+              <li>
+                <Link 
+                  to="/recipes"
+                  className="dropdown-item"
+                  onClick={() => setRecipesMenuOpen(false)}
+                >
+                  🔍 Barcha retseptlar
+                </Link>
+              </li>
+            </ul>
           </li>
-          <li className={styles.navItem}>
-            <NavLink to="/favorites" className={activeClass}>Sevimli</NavLink>
+          
+          <li className="menu-item">
+            <NavLink to="/favorites" className={({ isActive }) => isActive ? 'active' : ''}>
+              Sevimli
+            </NavLink>
           </li>
         </ul>
 
-        <div className={styles.btnContainer}>
-          <button 
-            className={styles.searchBtn} 
-            aria-label="Qidirish"
-            onClick={onSearchClick} 
-          >
+        {/* O'ng tomon */}
+        <div className="navbar-actions">
+          <button className="search-btn" onClick={handleSearchClick}>
             <Search size={20} />
           </button>
-
-          <Link to="/profile" className={styles.profileBtn}>
-            <div className={styles.avatar}>
+          
+          <Link to="/profile" className="profile-btn">
+            <div className="avatar">
               <img src="https://i.pravatar.cc/150?u=azizbek" alt="User" />
             </div>
-            <span className={styles.welcomeText}>
+            <span className="welcome-text">
               Xush kelibsiz, <b>Azizbek!</b>
             </span>
           </Link>
-
-          <button className={styles.logoutBtn} title="Chiqish">
+          
+          <button className="logout-btn">
             <LogOut size={18} />
           </button>
         </div>

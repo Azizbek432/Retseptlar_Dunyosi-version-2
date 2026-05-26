@@ -7,7 +7,7 @@
   justify-content: center;
   text-align: center;
   color: white;
-  background: url("../../../assets/images/somsa.png") no-repeat center
+  background: url("/images/somsa.jpg") no-repeat center
     center/cover;
   overflow: hidden;
 }
