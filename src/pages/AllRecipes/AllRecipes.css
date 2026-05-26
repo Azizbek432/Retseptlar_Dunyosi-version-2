@@ -1,0 +1,119 @@
+.all-recipes-page {
+  min-height: 100vh;
+  background: #120f08; /* ✅ Qora fon (Home kabi) */
+  color: white;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 40px 0;
+}
+
+.recipe-card-wrapper {
+  position: relative;
+  background: #1e1b13;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid #2a261d;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recipe-card-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(243, 166, 29, 0.2);
+}
+
+.like-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s;
+}
+
+.like-btn:hover {
+  background: rgba(255, 71, 87, 0.8);
+  transform: scale(1.1);
+}
+
+.like-btn.liked {
+  background: rgba(255, 71, 87, 0.9);
+}
+
+.page-header {
+  text-align: center;
+  margin: 40px 0;
+  color: white;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.page-header p {
+  color: #888;
+  font-size: 1.1rem;
+}
+
+.loading, .no-results {
+  text-align: center;
+  padding: 50px;
+  color: #888;
+  font-size: 1.2rem;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.recipe-card-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.like-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s;
+  color: white;
+}
+
+.like-btn:hover {
+  background: rgba(255, 71, 87, 0.8);
+  transform: scale(1.1);
+}
+
+.like-btn.liked {
+  background: rgba(255, 71, 87, 0.9);
+}
+
+.like-btn.liked svg {
+  fill: white;
+}

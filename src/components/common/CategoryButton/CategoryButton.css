@@ -1,18 +1,30 @@
-.categoryBtn{
-    padding: 10px 15px;
-    border: 1px solid rgba(146, 102, 20, 0.371);
-    background-color: rgba(201, 140, 28, 0.165);
-    border-radius: 20px;
-    color: white;
-    cursor: pointer;
-    font-size: 17px;
-    font-weight: 550;
-    transition: 0.3s;
+.cat-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #2a261d;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
+.cat-btn:hover {
+  background-color: #f3a61d;
+  color: #120f08;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(243, 166, 29, 0.3);
+}
 
-.categoryBtn:hover{
-    border: 1px solid rgb(255, 166, 0);
-    background-color: rgba(173, 120, 21, 0.441);
-    transform: translateY(-5px);
+.cat-icon {
+  font-size: 1.2rem;
+}
+
+.cat-name {
+  font-weight: 500;
+  font-size: 0.95rem;
 }
