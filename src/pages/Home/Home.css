@@ -1,0 +1,10 @@
+.home-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #120f08;
+}
+
+main {
+  flex: 1;
+}
