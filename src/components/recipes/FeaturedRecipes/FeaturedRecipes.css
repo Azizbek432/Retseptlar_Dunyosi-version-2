@@ -39,3 +39,9 @@
   color: #888;
   font-size: 1.1rem;
 }
+.recipesCardContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  width: 100%;
+}
