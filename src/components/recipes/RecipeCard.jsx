@@ -32,7 +32,7 @@ const RecipeCard = ({ recipe, isFavorite, onToggleFavorite }) => {
 
       <div className="card_content">
         <h3>{recipe.title}</h3>
-        <p>{recipe.desc.substring(0, 60)}...</p>
+        <p>{recipe.description.substring(0, 60)}...</p>
 
         <div className="card_footer">
           <span className="time">
