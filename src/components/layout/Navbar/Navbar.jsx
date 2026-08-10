@@ -102,18 +102,7 @@ const Navbar = ({ onSearchClick }) => {
             <Search size={20} />
           </button>
           
-          <Link to="/profile" className="profile-btn">
-            <div className="avatar">
-              <img src="https://i.pravatar.cc/150?u=azizbek" alt="User" />
-            </div>
-            <span className="welcome-text">
-              Xush kelibsiz, <b>Azizbek!</b>
-            </span>
-          </Link>
           
-          <button className="logout-btn">
-            <LogOut size={18} />
-          </button>
         </div>
       </div>
     </nav>
