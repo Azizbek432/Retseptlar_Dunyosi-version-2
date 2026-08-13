@@ -5,7 +5,6 @@ import Home from '../pages/Home/Home';
 import AllRecipes from '../pages/AllRecipes/AllRecipes';
 import Detail from '../pages/Detail/Detail';
 import Favorites from '../pages/Favorites/Favorites';
-import Profile from '../pages/Profile/Profile';
 import NotFound from '../pages/NotFound/NotFound';
 
 // ⚠️ Admin importlari vaqtincha koment qilingan:
@@ -20,7 +19,6 @@ function AppRouter() {
       <Route path="/recipes" element={<AllRecipes />} />
       <Route path="/detail/:id" element={<Detail />} />
       <Route path="/favorites" element={<Favorites />} />
-      <Route path="/profile" element={<Profile />} />
       
       {/* ⚠️ Admin route'lari vaqtincha koment qilingan: */}
       {/* <Route path="/admin/login" element={<AdminLogin />} /> */}
